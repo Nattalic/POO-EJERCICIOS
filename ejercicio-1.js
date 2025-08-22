@@ -13,12 +13,14 @@ class Auto {
     determinarAntiguo() {
         if (this.año < 2000) {
             console.log(`El ${this.marca} de modelo ${this.modelo} es antiguo`)
+        } else {
+            console.log(`El auto ${this.marca} no es antiguo`)
         }
     }
 
     verificarLujo() {
         const marcasLujo = ["Mercedes", "BMW", "Audi"]
-        if (this.marca === marcasLujo) {
+        if (marcasLujo.includes(this.marca)) { //includes es un metodo que busca ver si algo esta dentro de un array o string 
             console.log(`El auto ${this.marca} es de lujo`)
         } else {
             console.log("no es de lujo F")
@@ -27,7 +29,7 @@ class Auto {
 }
 
 
-const miAuto = new Auto("porsche", "GTR", 1999)
+const miAuto = new Auto("Porsche", "GTR", 2001)
 
 miAuto.mostrarInfo()
 miAuto.determinarAntiguo()
