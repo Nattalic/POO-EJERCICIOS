@@ -30,7 +30,7 @@ class CuentaBancaria {
             console.log("saldos insuficientes")
             return this.saldo
         }
- 
+
     }
 }
 
